@@ -11,6 +11,7 @@ Public Class qZipMain
         '' Get the file and update the label.
         Dim targetFile = getTargetFile()
         Label1.Text = Label1.Text.Replace("{filename}", targetFile.Name)
+        Label1.Refresh()
 
         '' Get the temporary path and then unzip the folder.  Delete the temp path at the end regardless of success or failure.
         Dim tempFolder As New DirectoryInfo(targetFile.DirectoryName & FS & ".tmp-" & Guid.NewGuid().ToString())
@@ -54,11 +55,9 @@ Public Class qZipMain
         ElseIf contents.Length > 1 Then
             destination = getUniquePathName(targetFile.Directory, getNameWithoutExt(targetFile))
             Directory.Move(tempFolder.FullName, destination)
-            Process.Start("explorer.exe", String.Format("/select,""{0}""", destination))
         ElseIf contents.First.Attributes.HasFlag(FileAttributes.Directory) Then
             destination = getUniquePathName(targetFile.Directory, contents.First.Name)
             Directory.Move(contents.First.FullName, destination)
-            Process.Start("explorer.exe", String.Format("/select,""{0}""", destination))
         Else
             destination = getUniquePathName(targetFile.Directory, getNameWithoutExt(contents.First), contents.First.Extension)
             File.Move(contents.First.FullName, destination)

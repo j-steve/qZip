@@ -360,15 +360,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:qZip"
-        "ProductCode" = "8:{1B4D1262-56FE-435D-BC99-0316918182AB}"
-        "PackageCode" = "8:{8130FB30-9EC5-4592-8440-FCCEC070B48D}"
+        "ProductCode" = "8:{DD6EE389-7A0E-4811-A6D1-771B232D63C5}"
+        "PackageCode" = "8:{88369BFB-2B85-46C9-9C80-08838828C25C}"
         "UpgradeCode" = "8:{A3350E39-B48D-433A-B9EC-C48A119AD222}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.2.0"
+        "ProductVersion" = "8:1.2.1"
         "Manufacturer" = "8:Sigma Studios"
         "ARPHELPTELEPHONE" = "8:812-827-8383"
         "ARPHELPLINK" = "8:"
@@ -882,7 +882,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5FBCCAA221244FC1A79A87EB77D4CAC8"
             {
-            "SourcePath" = "8:..\\qZip\\obj\\Debug\\qZip.exe"
+            "SourcePath" = "8:..\\qZip\\obj\\Release\\qZip.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6FE5F07EE0EB4672A53156E954BE9071"
