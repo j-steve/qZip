@@ -13,6 +13,8 @@ Public Class qZipMain
         Label1.Text = Label1.Text.Replace("{filename}", targetFile.Name)
         Label1.Refresh()
 
+        getParentProcess()
+
         '' Get the temporary path and then unzip the folder.  Delete the temp path at the end regardless of success or failure.
         Dim tempFolder As New DirectoryInfo(targetFile.DirectoryName & FS & ".tmp-" & Guid.NewGuid().ToString())
         Try
@@ -64,10 +66,23 @@ Public Class qZipMain
         End If
 
         Process.Start("explorer.exe", String.Format("/select,""{0}""", destination))
+        Dim parentProcess = getParentProcess()
+        If parentProcess.ProcessName = "explorer" Then parentProcess.Kill()
 
         '' Remove the original zipped file.
         targetFile.Delete()
     End Sub
+
+    Function getParentProcess() As Process
+        Dim myId = Process.GetCurrentProcess().Id
+        Dim query = String.Format("SELECT ParentProcessId FROM Win32_Process WHERE ProcessId = {0}", myId)
+        Dim search = New System.Management.ManagementObjectSearcher("root\CIMV2", query)
+        Dim results = search.[Get]().GetEnumerator()
+        results.MoveNext()
+        Dim queryObj = results.Current
+        Dim parentId = CUInt(queryObj("ParentProcessId"))
+        Return Process.GetProcessById(CInt(parentId))
+    End Function
 
     Function getNameWithoutExt(file As FileSystemInfo) As String
         If (file.Attributes.HasFlag(FileAttributes.Directory)) Then Return file.Name
