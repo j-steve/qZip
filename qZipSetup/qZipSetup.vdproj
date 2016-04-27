@@ -58,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0CDB26050384DD0D1B68D8AA17FBCA02"
+        "OwnerKey" = "8:_6A677BBD867847F702F52FE80E799DC3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6A677BBD867847F702F52FE80E799DC3"
+        "OwnerKey" = "8:_0CDB26050384DD0D1B68D8AA17FBCA02"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -175,11 +175,6 @@
             "AssemblyAsmDisplayName" = "8:System.IO.Compression.FileSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
                 "ScatterAssemblies"
                 {
-                    "_0CDB26050384DD0D1B68D8AA17FBCA02"
-                    {
-                    "Name" = "8:System.IO.Compression.FileSystem.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.IO.Compression.FileSystem.dll"
             "TargetName" = "8:"
@@ -226,11 +221,6 @@
             "AssemblyAsmDisplayName" = "8:System.IO.Compression, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
                 "ScatterAssemblies"
                 {
-                    "_68F792F3E08EF4E51E51D2AC79B9EB00"
-                    {
-                    "Name" = "8:System.IO.Compression.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.IO.Compression.dll"
             "TargetName" = "8:"
@@ -257,11 +247,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_6A677BBD867847F702F52FE80E799DC3"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -360,15 +345,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:qZip"
-        "ProductCode" = "8:{2840CF9D-556B-4206-8076-E4C75C3ED297}"
-        "PackageCode" = "8:{AD447EEC-8F0E-459C-B0C5-E1062D5AF9BD}"
+        "ProductCode" = "8:{B394D88A-5F5D-495A-8C4F-DF43BAA5ED9B}"
+        "PackageCode" = "8:{84C81AE2-6E28-4F8D-A633-A5B09F57C25A}"
         "UpgradeCode" = "8:{A3350E39-B48D-433A-B9EC-C48A119AD222}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.2.5"
+        "ProductVersion" = "8:1.2.6"
         "Manufacturer" = "8:Sigma Studios"
         "ARPHELPTELEPHONE" = "8:812-827-8383"
         "ARPHELPLINK" = "8:"

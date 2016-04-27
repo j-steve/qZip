@@ -93,7 +93,7 @@ Public Class qZipMain
     Function getUniquePathName(dirInfo As DirectoryInfo, name As String, Optional extension As String = "") As String
         Dim pathStart = dirInfo.FullName & FS & name
         Dim fullPath = pathStart & extension
-        Dim i As Integer = 1
+        Dim i As Integer = 2 ' First copy with no suffix is the original copy, so the first copy to use a suffix will be "2"
         While File.Exists(fullPath) OrElse Directory.Exists(fullPath)
             fullPath = pathStart & String.Format(DUPLICATE_PATH_SUFFIX, i) & extension
             i += 1
