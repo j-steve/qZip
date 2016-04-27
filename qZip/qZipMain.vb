@@ -30,8 +30,7 @@ Public Class qZipMain
         While Not File.Exists(targetFilename)
             Dim ofd As New OpenFileDialog() With {
                 .Title = "Select file to Unzip...",
-                .Filter = "Zip Files (*.zip)|*.zip|All Files (*.*)|*.*",
-                .InitialDirectory = "D:\User\Downloads\TESTBED"
+                .Filter = "Zip Files (*.zip)|*.zip|All Files (*.*)|*.*"
             }
             If ofd.ShowDialog() = DialogResult.OK Then targetFilename = ofd.FileName
             ''Dim errorMessage = String.Format("Invalid filename specified: ""{0}"".", targetFilename)
