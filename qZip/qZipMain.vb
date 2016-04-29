@@ -19,6 +19,9 @@ Public Class qZipMain
         Dim tempFolder As New DirectoryInfo(targetFile.DirectoryName & FS & ".tmp-" & Guid.NewGuid().ToString())
         Try
             UnZip(targetFile, tempFolder)
+        Catch e As Exception
+            Me.Hide()
+            MessageBox.Show("Failed to unzip this file.", "Unzip Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             If tempFolder.Exists Then tempFolder.Delete()
         End Try
