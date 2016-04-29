@@ -13,8 +13,6 @@ Public Class qZipMain
         Label1.Text = Label1.Text.Replace("{filename}", targetFile.Name)
         Label1.Refresh()
 
-        getParentProcess()
-
         '' Get the temporary path and then unzip the folder.  Delete the temp path at the end regardless of success or failure.
         Dim tempFolder As New DirectoryInfo(targetFile.DirectoryName & FS & ".tmp-" & Guid.NewGuid().ToString())
         Try
