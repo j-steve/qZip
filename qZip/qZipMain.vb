@@ -18,14 +18,15 @@ Public Class qZipMain
         Try
             UnZip(targetFile, tempFolder)
         Catch e As Exception
-            Me.Hide()
-            MessageBox.Show("Failed to unzip this file.", "Unzip Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Hide()
+            Dim errorMsg = "Failed to unzip this file." & vbNewLine & "REASON: " & e.Message
+            MessageBox.Show(errorMsg, "Unzip Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             If tempFolder.Exists Then tempFolder.Delete()
         End Try
 
         '' Exit the application.
-        Me.Close()
+        Close()
     End Sub
 
     Function getTargetFile() As FileInfo
